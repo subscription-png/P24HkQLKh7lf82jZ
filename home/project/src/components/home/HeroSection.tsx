@@ -1,5 +1,4 @@
 import { motion, useReducedMotion } from 'framer-motion';
-import Typewriter from '@/components/Typewriter';
 
 /* HOMESEC1GIRL — bold, stylish woman portrait matching the "stand out" brand energy. */
 const HOMESEC1GIRL =
@@ -64,32 +63,40 @@ export default function HeroSection() {
         {/* Copy */}
         <div className="relative">
           <h1 className="leading-[1.12] tracking-tight">
-            <span className="block text-[clamp(2rem,4.5vw,3.75rem)] font-normal">
-              <Typewriter
-                startDelay={500}
-                speed={40}
-                segments={[
-                  { text: 'Play it ', className: 'text-white' },
-                  { text: 'safe,', className: 'text-purple font-bold' },
-                ]}
-              />
-            </span>
-            <span className="block text-[clamp(2rem,4.5vw,3.75rem)] font-normal">
-              <Typewriter
-                startDelay={1400}
-                speed={40}
-                segments={[
-                  { text: 'you will be ', className: 'text-white' },
-                  { text: 'forgotten.', className: 'text-purple font-bold' },
-                ]}
-              />
-            </span>
-            <span className="mt-5 block text-[clamp(2rem,4.5vw,3.75rem)] font-normal text-white">
-              <Typewriter startDelay={2600} speed={40} segments={[{ text: "It's time to" }]} />
-            </span>
-            <span className="mt-1 block text-[clamp(5rem,10vw,9rem)] font-bold leading-none text-yellow">
-              <Typewriter startDelay={3400} speed={60} segments={[{ text: 'stand out!' }]} />
-            </span>
+            <motion.span
+              className="block text-[clamp(2rem,4.5vw,3.75rem)] font-normal"
+              initial={reduced ? undefined : { opacity: 0, x: -40 }}
+              animate={reduced ? undefined : { opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <span className="text-white">Play it </span>
+              <span className="text-purple font-bold">safe,</span>
+            </motion.span>
+            <motion.span
+              className="block text-[clamp(2rem,4.5vw,3.75rem)] font-normal"
+              initial={reduced ? undefined : { opacity: 0, x: -40 }}
+              animate={reduced ? undefined : { opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <span className="text-white">you will be </span>
+              <span className="text-purple font-bold">forgotten.</span>
+            </motion.span>
+            <motion.span
+              className="mt-5 block text-[clamp(2rem,4.5vw,3.75rem)] font-normal text-white"
+              initial={reduced ? undefined : { opacity: 0, x: -40 }}
+              animate={reduced ? undefined : { opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            >
+              It's time to
+            </motion.span>
+            <motion.span
+              className="mt-1 block whitespace-nowrap text-[clamp(3.5rem,8vw,7rem)] font-bold leading-none text-yellow"
+              initial={reduced ? undefined : { opacity: 0, scale: 0.9 }}
+              animate={reduced ? undefined : { opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            >
+              stand out!
+            </motion.span>
           </h1>
 
           {/* Add more space below h1 and position chevrons at the bottom right */}
@@ -104,7 +111,7 @@ export default function HeroSection() {
                 aria-hidden="true"
                 initial={reduced ? undefined : { opacity: 0, x: -18 }}
                 animate={reduced ? undefined : { opacity: 1, x: 0 }}
-                transition={{ delay: 4.3, duration: 0.5 }}
+                transition={{ delay: 1.4, duration: 0.5 }}
               >
                 <path d="M5 4l8 8-8 8" stroke="#FF0063" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
               </motion.svg>
@@ -117,7 +124,7 @@ export default function HeroSection() {
                 aria-hidden="true"
                 initial={reduced ? undefined : { opacity: 0, x: -18 }}
                 animate={reduced ? undefined : { opacity: 1, x: 0 }}
-                transition={{ delay: 4.5, duration: 0.5 }}
+                transition={{ delay: 1.6, duration: 0.5 }}
               >
                 <path d="M5 4l8 8-8 8" stroke="#FFF500" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
               </motion.svg>
@@ -130,7 +137,7 @@ export default function HeroSection() {
                 aria-hidden="true"
                 initial={reduced ? undefined : { opacity: 0, x: -18 }}
                 animate={reduced ? undefined : { opacity: 1, x: 0 }}
-                transition={{ delay: 4.7, duration: 0.5 }}
+                transition={{ delay: 1.8, duration: 0.5 }}
               >
                 <path d="M5 4l8 8-8 8" stroke="#AD00FF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
               </motion.svg>
