@@ -91,7 +91,7 @@ export default function GrowthDashboardSection() {
               </div>
               <div className="mt-3 flex items-center justify-between rounded-xl border border-indigo-2 bg-[#161226]/90 px-4 py-3 text-xs text-grey">
                 <span className="font-bold text-[#4ade80]">STATUS: OPTIMAL</span>
-                <span>EXECUTE > GROWTH.MODULE</span>
+                <span>EXECUTE {'>'} GROWTH.MODULE</span>
               </div>
             </div>
           </FadeIn>
