@@ -93,11 +93,11 @@ export default function HeroSection() {
           </h1>
 
           {/* Three chevrons */}
-          <div className="relative mt-10 h-32 w-64 md:absolute md:-bottom-16 md:left-auto md:right-6 md:mt-0">
+          <div className="relative mt-10 h-40 w-full md:absolute md:-bottom-20 md:left-auto md:right-0 md:mt-0 md:h-48 md:w-80">
             <motion.svg
-              className="absolute left-16 top-0"
-              width="72"
-              height="72"
+              className="absolute right-20 top-0 md:right-24"
+              width="96"
+              height="96"
               viewBox="0 0 24 24"
               fill="none"
               aria-hidden="true"
@@ -108,9 +108,9 @@ export default function HeroSection() {
               <path d="M5 4l8 8-8 8" stroke="#FF0063" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
             </motion.svg>
             <motion.svg
-              className="absolute left-2 top-14"
-              width="40"
-              height="40"
+              className="absolute right-32 top-16 md:right-40 md:top-20"
+              width="56"
+              height="56"
               viewBox="0 0 24 24"
               fill="none"
               aria-hidden="true"
@@ -121,9 +121,9 @@ export default function HeroSection() {
               <path d="M5 4l8 8-8 8" stroke="#FFF500" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
             </motion.svg>
             <motion.svg
-              className="absolute left-24 top-14"
-              width="48"
-              height="48"
+              className="absolute right-4 top-16 md:right-6 md:top-20"
+              width="64"
+              height="64"
               viewBox="0 0 24 24"
               fill="none"
               aria-hidden="true"
