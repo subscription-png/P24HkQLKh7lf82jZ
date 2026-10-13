@@ -63,28 +63,28 @@ export default function HeroSection() {
       <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 px-5 md:grid-cols-2 md:px-10">
         {/* Copy */}
         <div className="relative">
-          <h1 className="text-[clamp(3rem,6vw,6rem)] font-bold leading-[1.12] tracking-tight">
-            <span className="block">
+          <h1 className="leading-[1.12] tracking-tight">
+            <span className="block text-[clamp(1.5rem,3.5vw,3rem)] font-normal">
               <Typewriter
                 startDelay={500}
                 speed={40}
                 segments={[
                   { text: 'Play it ', className: 'text-white' },
-                  { text: 'safe,', className: 'text-purple' },
+                  { text: 'safe,', className: 'text-purple font-bold' },
                 ]}
               />
             </span>
-            <span className="block">
+            <span className="block text-[clamp(1.5rem,3.5vw,3rem)] font-normal">
               <Typewriter
                 startDelay={1400}
                 speed={40}
                 segments={[
                   { text: 'you will be ', className: 'text-white' },
-                  { text: 'forgotten.', className: 'text-purple' },
+                  { text: 'forgotten.', className: 'text-purple font-bold' },
                 ]}
               />
             </span>
-            <span className="mt-5 block text-white">
+            <span className="mt-5 block text-[clamp(1.5rem,3.5vw,3rem)] font-normal text-white">
               <Typewriter startDelay={2600} speed={40} segments={[{ text: "It's time to" }]} />
             </span>
             <span className="mt-1 block text-[clamp(4rem,8vw,7rem)] font-bold leading-none text-yellow">
