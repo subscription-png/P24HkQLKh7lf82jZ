@@ -1,7 +1,6 @@
-import { motion } from 'framer-motion';
-import FadeIn from '@/components/FadeIn';
 import { useEffect, useRef, useState } from 'react';
-import { useInView } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
+import FadeIn from '@/components/FadeIn';
 
 function Stat({ value, label }: { value: string; label: string }) {
   return (
@@ -12,10 +11,11 @@ function Stat({ value, label }: { value: string; label: string }) {
   );
 }
 
-function CountUp({ to, suffix = '' }: { to: number; suffix?: string }) {
+function CountUp({ to }: { to: number }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: '-60px' });
   const [val, setVal] = useState(0);
+
   useEffect(() => {
     if (!inView) return;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -34,12 +34,8 @@ function CountUp({ to, suffix = '' }: { to: number; suffix?: string }) {
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
   }, [inView, to]);
-  return (
-    <span ref={ref}>
-      {val.toLocaleString('en-AU')}
-      {suffix}
-    </span>
-  );
+
+  return <span ref={ref}>{val.toLocaleString('en-AU')}</span>;
 }
 
 const DASH_STATS = [
@@ -56,7 +52,7 @@ export default function GrowthDashboardSection() {
       <section className="bg-gradient-to-b from-indigo to-[#2a0630] py-20 md:py-28" aria-label="Growth dashboard">
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 md:grid-cols-2 md:px-10">
           <FadeIn>
-            <div className="relative" role="img" aria-label="Growth dashboard interface showing leads, social media, appointments and outbound calls">
+            <div role="img" aria-label="Growth dashboard interface showing leads, social media, appointments and outbound calls">
               <div className="rounded-2xl border border-indigo-2 bg-[#161226]/90 p-5">
                 <div className="flex items-center justify-between">
                   <p className="font-bold">Growth Dashboard</p>
@@ -74,7 +70,6 @@ export default function GrowthDashboardSection() {
                     </div>
                   ))}
                 </div>
-                {/* mini bar chart */}
                 <svg viewBox="0 0 300 70" className="mt-4 w-full" aria-hidden="true">
                   {[18, 28, 24, 40, 34, 52, 46, 62].map((h, i) => (
                     <motion.rect
@@ -88,7 +83,7 @@ export default function GrowthDashboardSection() {
                       initial={{ scaleY: 0 }}
                       whileInView={{ scaleY: 1 }}
                       viewport={{ once: true }}
-                      style={{ transformOrigin: `24px 66px`, transformBox: 'fill-box', transformOrigin: 'bottom' }}
+                      style={{ transformBox: 'fill-box', transformOrigin: 'bottom' }}
                       transition={{ delay: i * 0.08, duration: 0.5, ease: 'easeOut' }}
                     />
                   ))}

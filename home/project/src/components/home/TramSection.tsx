@@ -4,6 +4,8 @@ import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion
 /* TRAMDOOR visual — full-width rainy tram doors. Left/right halves part on scroll. */
 const TRAM_IMAGE =
   'https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=1800&auto=format&fit=crop';
+const CITY_IMAGE =
+  'https://images.unsplash.com/photo-1514395462725-fb4566210144?q=80&w=1800&auto=format&fit=crop';
 
 export default function TramSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -20,9 +22,7 @@ export default function TramSection() {
       {/* Revealed background */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(https://images.unsplash.com/photo-1514395462725-fb4566210144?q=80&w=1800&auto=format&fit=crop)`,
-        }}
+        style={{ backgroundImage: `url(${CITY_IMAGE})` }}
         aria-hidden="true"
       />
       <div className="absolute inset-0 bg-indigo/55" aria-hidden="true" />
@@ -37,11 +37,14 @@ export default function TramSection() {
       {/* Door halves */}
       <motion.div
         style={reduced ? undefined : { x: leftX }}
-        className="absolute inset-y-0 left-0 z-10 w-1/2 border-r-2 border-indigo/80 bg-cover bg-[position:left_center]"
+        className="absolute inset-y-0 left-0 z-10 w-1/2 border-r-2 border-indigo/80"
         role="img"
         aria-label="Rain-streaked tram door, left half"
       >
-        <div className="h-full w-full bg-cover" style={{ backgroundImage: `url(${TRAM_IMAGE})`, backgroundPosition: 'left center', backgroundSize: '200% 100%' }} />
+        <div
+          className="h-full w-full"
+          style={{ backgroundImage: `url(${TRAM_IMAGE})`, backgroundPosition: 'left center', backgroundSize: '200% 100%' }}
+        />
       </motion.div>
       <motion.div
         style={reduced ? undefined : { x: rightX }}
@@ -49,7 +52,10 @@ export default function TramSection() {
         role="img"
         aria-label="Rain-streaked tram door, right half"
       >
-        <div className="h-full w-full" style={{ backgroundImage: `url(${TRAM_IMAGE})`, backgroundPosition: 'right center', backgroundSize: '200% 100%' }} />
+        <div
+          className="h-full w-full"
+          style={{ backgroundImage: `url(${TRAM_IMAGE})`, backgroundPosition: 'right center', backgroundSize: '200% 100%' }}
+        />
       </motion.div>
 
       <motion.div
