@@ -64,7 +64,7 @@ export default function HeroSection() {
         {/* Copy */}
         <div className="relative">
           <h1 className="leading-[1.12] tracking-tight">
-            <span className="block text-[clamp(1.5rem,3.5vw,3rem)] font-normal">
+            <span className="block text-[clamp(2rem,4.5vw,3.75rem)] font-normal">
               <Typewriter
                 startDelay={500}
                 speed={40}
@@ -74,7 +74,7 @@ export default function HeroSection() {
                 ]}
               />
             </span>
-            <span className="block text-[clamp(1.5rem,3.5vw,3rem)] font-normal">
+            <span className="block text-[clamp(2rem,4.5vw,3.75rem)] font-normal">
               <Typewriter
                 startDelay={1400}
                 speed={40}
@@ -84,10 +84,10 @@ export default function HeroSection() {
                 ]}
               />
             </span>
-            <span className="mt-5 block text-[clamp(1.5rem,3.5vw,3rem)] font-normal text-white">
+            <span className="mt-5 block text-[clamp(2rem,4.5vw,3.75rem)] font-normal text-white">
               <Typewriter startDelay={2600} speed={40} segments={[{ text: "It's time to" }]} />
             </span>
-            <span className="mt-1 block text-[clamp(4rem,8vw,7rem)] font-bold leading-none text-yellow">
+            <span className="mt-1 block text-[clamp(5rem,10vw,9rem)] font-bold leading-none text-yellow">
               <Typewriter startDelay={3400} speed={60} segments={[{ text: 'stand out!' }]} />
             </span>
           </h1>
