@@ -60,7 +60,7 @@ export default function HeroSection() {
         />
       </svg>
 
-      <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 px-5 pb-10 md:grid-cols-2 md:px-10">
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 px-5 md:grid-cols-2 md:px-10">
         {/* Copy */}
         <div className="relative">
           <h1 className="text-[clamp(2rem,4.4vw,3.6rem)] font-bold leading-[1.12] tracking-tight">
@@ -138,7 +138,7 @@ export default function HeroSection() {
 
         {/* HOMESEC1GIRL image */}
         <motion.div
-          className="relative mx-auto w-full max-w-md md:max-w-none"
+          className="relative mx-auto flex w-full items-end md:col-start-2 md:row-start-1 md:h-full"
           initial={reduced ? undefined : { opacity: 0, y: 40 }}
           animate={reduced ? undefined : { opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
@@ -146,7 +146,7 @@ export default function HeroSection() {
           <img
             src={HOMESEC1GIRL}
             alt="Expressing confidence and individuality — communicate your brand by being uniquely you."
-            className="float-slow mx-auto max-h-[70vh] w-auto object-contain"
+            className="float-slow mx-auto h-auto w-full max-w-full object-contain object-bottom md:max-h-full md:w-auto"
             loading="eager"
             decoding="async"
           />
