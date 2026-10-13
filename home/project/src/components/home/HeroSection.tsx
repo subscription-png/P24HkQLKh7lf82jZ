@@ -1,10 +1,9 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import Typewriter from '@/components/Typewriter';
 
-/* HOMESEC1GIRL — bold, stylish woman portrait matching the "stand out" brand energy.
-   The original image.seed.so asset host is unreachable, so a reliable Unsplash image is used. */
+/* HOMESEC1GIRL — bold, stylish woman portrait matching the "stand out" brand energy. */
 const HOMESEC1GIRL =
-  'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=900&auto=format&fit=crop';
+  'https://res.cloudinary.com/lafaaku5/image/upload/v1791884780/vwcnqv922hxewyl8ptwv.png';
 
 export default function HeroSection() {
   const reduced = useReducedMotion();
@@ -126,7 +125,7 @@ export default function HeroSection() {
         >
           <img
             src={HOMESEC1GIRL}
-            alt="Confident woman in bold, colourful fashion — the D2 Media stand-out spirit"
+            alt="Expressing confidence and individuality — communicate your brand by being uniquely you."
             className="float-slow mx-auto max-h-[70vh] w-auto object-contain"
             loading="eager"
             decoding="async"
