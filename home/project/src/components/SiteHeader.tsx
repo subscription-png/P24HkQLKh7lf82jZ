@@ -38,7 +38,7 @@ export default function SiteHeader() {
             <Link
               key={item.to}
               to={item.to}
-              className={`text-sm font-bold tracking-widest transition-colors duration-200 hover:text-purple focus:outline-none focus-visible:ring-2 focus-visible:ring-coral rounded px-1 py-1 ${
+              className={`text-base font-bold tracking-widest transition-colors duration-200 hover:text-purple focus:outline-none focus-visible:ring-2 focus-visible:ring-coral rounded px-1 py-1 ${
                 pathname === item.to ? 'text-purple' : 'text-white'
               }`}
             >
@@ -47,10 +47,10 @@ export default function SiteHeader() {
           ))}
           <Link
             to="/get-in-touch"
-            className="group inline-flex items-center gap-3 rounded-full border-2 border-coral px-6 py-2.5 text-sm font-bold tracking-widest text-white transition-colors duration-200 hover:bg-coral focus:outline-none focus-visible:ring-2 focus-visible:ring-coral focus-visible:ring-offset-2 focus-visible:ring-offset-indigo"
+            className="group inline-flex items-center gap-3 rounded-full border-2 border-coral px-7 py-3 text-base font-bold tracking-widest text-white transition-colors duration-200 hover:bg-coral focus:outline-none focus-visible:ring-2 focus-visible:ring-coral focus-visible:ring-offset-2 focus-visible:ring-offset-indigo"
           >
             GET IN TOUCH
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="text-coral transition-colors duration-200 group-hover:text-white">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="text-coral transition-colors duration-200 group-hover:text-white">
               <path d="M4 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </Link>
@@ -85,7 +85,7 @@ export default function SiteHeader() {
             <Link
               key={item.to}
               to={item.to}
-              className={`rounded px-3 py-3 text-base font-bold tracking-widest transition-colors hover:text-purple focus:outline-none focus-visible:ring-2 focus-visible:ring-coral ${
+              className={`rounded px-3 py-3 text-lg font-bold tracking-widest transition-colors hover:text-purple focus:outline-none focus-visible:ring-2 focus-visible:ring-coral ${
                 pathname === item.to ? 'text-purple' : 'text-white'
               }`}
             >
@@ -94,10 +94,10 @@ export default function SiteHeader() {
           ))}
           <Link
             to="/get-in-touch"
-            className="mt-2 inline-flex items-center justify-center gap-3 rounded-full border-2 border-coral px-6 py-3 text-base font-bold tracking-widest transition-colors hover:bg-coral focus:outline-none focus-visible:ring-2 focus-visible:ring-coral"
+            className="mt-2 inline-flex items-center justify-center gap-3 rounded-full border-2 border-coral px-6 py-3 text-lg font-bold tracking-widest transition-colors hover:bg-coral focus:outline-none focus-visible:ring-2 focus-visible:ring-coral"
           >
             GET IN TOUCH
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="text-coral">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="text-coral">
               <path d="M4 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </Link>

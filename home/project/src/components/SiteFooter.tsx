@@ -6,14 +6,17 @@ export default function SiteFooter() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-3 md:px-10">
         {/* Brand + contact */}
         <div className="space-y-5">
-          <Link to="/" aria-label="D2 Media — home" className="inline-flex items-end gap-1.5 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-coral">
-            <svg width="30" height="30" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <Link to="/" aria-label="D2 Media — home" className="inline-flex items-center gap-2 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-coral">
+            <svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true">
               <path d="M6 4 L22 20 L6 36" stroke="#AD00FF" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M12 8 L24 20" stroke="#FF0063" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <span className="text-xl font-bold leading-none tracking-tight text-white">MEDIA</span>
+            <span className="text-2xl font-bold leading-none tracking-tight text-white">
+              <span className="sr-only">D2 </span>
+              MEDIA
+            </span>
           </Link>
-          <address className="space-y-3 not-italic text-sm leading-relaxed text-grey">
+          <address className="space-y-3 not-italic text-base leading-relaxed text-grey">
             <p>
               <span className="font-bold text-white">A:</span> Port Melbourne VIC 3207
             </p>
@@ -31,7 +34,7 @@ export default function SiteFooter() {
         </div>
 
         {/* Site links */}
-        <nav aria-label="Footer" className="space-y-3 text-sm font-bold tracking-widest md:justify-self-center">
+        <nav aria-label="Footer" className="space-y-3 text-base font-bold tracking-widest md:justify-self-center">
           <Link to="/d2-dna" className="block w-fit rounded py-1 transition-colors hover:text-purple focus:outline-none focus-visible:ring-2 focus-visible:ring-coral">
             D2 DNA
           </Link>
@@ -44,7 +47,7 @@ export default function SiteFooter() {
         </nav>
 
         {/* Legal + social */}
-        <div className="space-y-4 text-sm font-bold tracking-widest md:justify-self-end">
+        <div className="space-y-4 text-base font-bold tracking-widest md:justify-self-end">
           <p className="text-grey">Privacy Policy</p>
           <p className="text-grey">Terms and Conditions</p>
           <div className="flex items-center gap-5 pt-2">
@@ -55,7 +58,7 @@ export default function SiteFooter() {
               aria-label="D2 Media on Facebook"
               className="rounded text-white transition-colors hover:text-coral focus:outline-none focus-visible:ring-2 focus-visible:ring-coral"
             >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.6 1.6-1.6h1.7V4.2c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3V14h2.8v8h3.4Z" />
               </svg>
             </a>
@@ -66,7 +69,7 @@ export default function SiteFooter() {
               aria-label="D2 Media on LinkedIn"
               className="rounded text-white transition-colors hover:text-coral focus:outline-none focus-visible:ring-2 focus-visible:ring-coral"
             >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.2 8h4.6v14H.2V8Zm7.6 0h4.4v1.9h.1c.6-1.1 2.1-2.3 4.3-2.3 4.6 0 5.4 3 5.4 6.9V22h-4.6v-6.6c0-1.6 0-3.6-2.2-3.6s-2.6 1.7-2.6 3.5V22H7.8V8Z" />
               </svg>
             </a>
