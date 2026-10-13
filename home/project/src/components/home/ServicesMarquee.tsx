@@ -1,16 +1,16 @@
 const SERVICES = [
-  'Branding',
-  'Graphic Design',
-  'Web Design',
-  'Social Media',
-  'AI Generation',
-  'Automation Calls',
-  'Lead Generation',
-  'Communication Marketing',
-  'Ad Analysis',
-  'Research',
-  'A/B Testing',
-  'Videos and Ads',
+  'BRANDING',
+  'GRAPHIC DESIGN',
+  'WEB DESIGN',
+  'SOCIAL MEDIA',
+  'AI GENERATION',
+  'AUTOMATION CALLS',
+  'LEAD GENERATION',
+  'COMMUNICATION MARKETING',
+  'AD ANALYSIS',
+  'RESEARCH',
+  'A/B TESTING',
+  'VIDEOS AND ADS',
 ];
 
 const CARDS = [
@@ -31,8 +31,8 @@ export default function ServicesMarquee() {
       <div className="overflow-hidden bg-purple py-4" role="marquee" aria-label="Our services">
         <div className="flex w-max animate-marquee-left whitespace-nowrap">
           {ticker.map((s, i) => (
-            <span key={i} className="px-6 text-xl font-bold tracking-wide text-white md:text-2xl">
-              {s} <span className="mx-3 text-white/70" aria-hidden="true">|</span>
+            <span key={i} className="px-6 text-xl font-normal tracking-[0.08em] text-white md:text-2xl">
+              {s} <span className="mx-3 text-white/70" aria-hidden="true">•</span>
             </span>
           ))}
         </div>
