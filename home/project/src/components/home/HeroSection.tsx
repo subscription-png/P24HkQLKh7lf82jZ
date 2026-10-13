@@ -5,11 +5,31 @@ import Typewriter from '@/components/Typewriter';
 const HOMESEC1GIRL =
   'https://res.cloudinary.com/lafaaku5/image/upload/v1791884780/vwcnqv922hxewyl8ptwv.png';
 
+const HERO_VIDEO =
+  'https://res.cloudinary.com/lafaaku5/video/upload/v1791886578/twsddnfjzprpt4vulw3r.mp4';
+
 export default function HeroSection() {
   const reduced = useReducedMotion();
 
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden bg-indigo pt-28 md:pt-24" aria-label="Introduction">
+      {/* Video background */}
+      <div className="absolute inset-0 h-full w-full overflow-hidden">
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+        >
+          <source src={HERO_VIDEO} type="video/mp4" />
+        </video>
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-indigo/60" />
+      </div>
+
       {/* Animated background paths */}
       <svg
         className="pointer-events-none absolute inset-0 h-full w-full opacity-40"
