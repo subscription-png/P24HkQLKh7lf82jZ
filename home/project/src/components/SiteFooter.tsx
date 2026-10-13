@@ -7,14 +7,13 @@ export default function SiteFooter() {
         {/* Brand + contact */}
         <div className="space-y-5">
           <Link to="/" aria-label="D2 Media — home" className="inline-flex items-center gap-2 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-coral">
-            <svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-              <path d="M6 4 L22 20 L6 36" stroke="#AD00FF" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M12 8 L24 20" stroke="#FF0063" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            <span className="text-2xl font-bold leading-none tracking-tight text-white">
-              <span className="sr-only">D2 </span>
-              MEDIA
-            </span>
+            <img
+              src="https://res.cloudinary.com/lafaaku5/image/upload/v1791879037/hp9flfj7ca8pmzqzuxlz.png"
+              alt="D2 Media"
+              width={120}
+              height={40}
+              className="h-10 w-auto"
+            />
           </Link>
           <address className="space-y-3 not-italic text-base leading-relaxed text-grey">
             <p>
