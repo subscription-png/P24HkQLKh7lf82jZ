@@ -63,7 +63,7 @@ export default function HeroSection() {
       <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 px-5 md:grid-cols-2 md:px-10">
         {/* Copy */}
         <div className="relative">
-          <h1 className="text-[clamp(2rem,4.4vw,3.6rem)] font-bold leading-[1.12] tracking-tight">
+          <h1 className="text-[clamp(3rem,6vw,6rem)] font-bold leading-[1.12] tracking-tight">
             <span className="block">
               <Typewriter
                 startDelay={500}
@@ -87,52 +87,54 @@ export default function HeroSection() {
             <span className="mt-5 block text-white">
               <Typewriter startDelay={2600} speed={40} segments={[{ text: "It's time to" }]} />
             </span>
-            <span className="mt-1 block text-[clamp(3rem,7.5vw,6rem)] font-bold leading-none text-yellow">
+            <span className="mt-1 block text-[clamp(4rem,8vw,7rem)] font-bold leading-none text-yellow">
               <Typewriter startDelay={3400} speed={60} segments={[{ text: 'stand out!' }]} />
             </span>
           </h1>
 
-          {/* Three chevrons */}
-          <div className="relative mt-10 h-40 w-full md:absolute md:-bottom-20 md:left-auto md:right-0 md:mt-0 md:h-48 md:w-80">
-            <motion.svg
-              className="absolute right-20 top-0 md:right-24"
-              width="96"
-              height="96"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden="true"
-              initial={reduced ? undefined : { opacity: 0, x: -18 }}
-              animate={reduced ? undefined : { opacity: 1, x: 0 }}
-              transition={{ delay: 4.3, duration: 0.5 }}
-            >
-              <path d="M5 4l8 8-8 8" stroke="#FF0063" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-            </motion.svg>
-            <motion.svg
-              className="absolute right-32 top-16 md:right-40 md:top-20"
-              width="56"
-              height="56"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden="true"
-              initial={reduced ? undefined : { opacity: 0, x: -18 }}
-              animate={reduced ? undefined : { opacity: 1, x: 0 }}
-              transition={{ delay: 4.5, duration: 0.5 }}
-            >
-              <path d="M5 4l8 8-8 8" stroke="#FFF500" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-            </motion.svg>
-            <motion.svg
-              className="absolute right-4 top-16 md:right-6 md:top-20"
-              width="64"
-              height="64"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden="true"
-              initial={reduced ? undefined : { opacity: 0, x: -18 }}
-              animate={reduced ? undefined : { opacity: 1, x: 0 }}
-              transition={{ delay: 4.7, duration: 0.5 }}
-            >
-              <path d="M5 4l8 8-8 8" stroke="#AD00FF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-            </motion.svg>
+          {/* Add more space below h1 and position chevrons at the bottom right */}
+          <div className="relative h-64 w-full flex items-end justify-end pt-10">
+            <div className="relative h-48 w-80">
+              <motion.svg
+                className="absolute right-20 top-0 md:right-24"
+                width="96"
+                height="96"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+                initial={reduced ? undefined : { opacity: 0, x: -18 }}
+                animate={reduced ? undefined : { opacity: 1, x: 0 }}
+                transition={{ delay: 4.3, duration: 0.5 }}
+              >
+                <path d="M5 4l8 8-8 8" stroke="#FF0063" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+              </motion.svg>
+              <motion.svg
+                className="absolute right-32 top-16 md:right-40 md:top-20"
+                width="56"
+                height="56"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+                initial={reduced ? undefined : { opacity: 0, x: -18 }}
+                animate={reduced ? undefined : { opacity: 1, x: 0 }}
+                transition={{ delay: 4.5, duration: 0.5 }}
+              >
+                <path d="M5 4l8 8-8 8" stroke="#FFF500" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+              </motion.svg>
+              <motion.svg
+                className="absolute right-4 top-16 md:right-6 md:top-20"
+                width="64"
+                height="64"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+                initial={reduced ? undefined : { opacity: 0, x: -18 }}
+                animate={reduced ? undefined : { opacity: 1, x: 0 }}
+                transition={{ delay: 4.7, duration: 0.5 }}
+              >
+                <path d="M5 4l8 8-8 8" stroke="#AD00FF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+              </motion.svg>
+            </div>
           </div>
         </div>
 
