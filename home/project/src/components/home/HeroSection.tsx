@@ -1,12 +1,9 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import Typewriter from '@/components/Typewriter';
 
-/* HOMESEC1GIRL — cut-out woman with pink bob, yellow sunglasses, split yellow/pink blazer holding champagne.
-   The supplied master document designates this asset; the URL below is the preserved reference image. */
+/* HOMESEC1GIRL — bold, stylish woman portrait matching the "stand out" brand energy.
+   The original image.seed.so asset host is unreachable, so a reliable Unsplash image is used. */
 const HOMESEC1GIRL =
-  'https://image.seed.so/i/0195a2db-hero-woman'; // fallback handled by onError below
-
-const FALLBACK_GIRL =
   'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=900&auto=format&fit=crop';
 
 export default function HeroSection() {
@@ -129,11 +126,7 @@ export default function HeroSection() {
         >
           <img
             src={HOMESEC1GIRL}
-            onError={(e) => {
-              const el = e.currentTarget;
-              if (el.src !== FALLBACK_GIRL) el.src = FALLBACK_GIRL;
-            }}
-            alt="Woman with a vivid pink bob and yellow sunglasses, wearing a split yellow and pink blazer and holding a glass of champagne"
+            alt="Confident woman in bold, colourful fashion — the D2 Media stand-out spirit"
             className="float-slow mx-auto max-h-[70vh] w-auto object-contain"
             loading="eager"
             decoding="async"
