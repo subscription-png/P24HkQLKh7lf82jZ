@@ -40,7 +40,7 @@ export default function ServicesMarquee() {
 
       {/* Three-second hook */}
       <div className="mx-auto max-w-4xl px-5 py-20 text-center md:py-28">
-        <h2 className="text-4xl font-bold leading-tight md:text-6xl">
+        <h2 className="text-5xl font-bold leading-tight md:text-7xl lg:text-8xl">
           Do they get it in
           <br />
           <span className="text-coral">3 seconds?</span>
