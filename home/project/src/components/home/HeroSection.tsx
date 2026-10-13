@@ -139,20 +139,15 @@ export default function HeroSection() {
         </div>
 
         {/* HOMESEC1GIRL image */}
-        <motion.div
-          className="relative mx-auto flex w-full items-end md:col-start-2 md:row-start-1 md:h-full"
-          initial={reduced ? undefined : { opacity: 0, y: 40 }}
-          animate={reduced ? undefined : { opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-        >
+        <div className="relative mx-auto flex w-full items-end md:col-start-2 md:row-start-1 md:h-full">
           <img
             src={HOMESEC1GIRL}
             alt="Expressing confidence and individuality — communicate your brand by being uniquely you."
-            className="float-slow mx-auto h-auto w-full max-w-full object-contain object-bottom md:max-h-full md:w-auto"
+            className="mx-auto h-auto w-full max-w-full object-contain object-bottom md:max-h-[110%] md:w-auto"
             loading="eager"
             decoding="async"
           />
-        </motion.div>
+        </div>
       </div>
     </section>
   );
