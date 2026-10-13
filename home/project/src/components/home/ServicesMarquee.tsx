@@ -3,8 +3,14 @@ const SERVICES = [
   'Graphic Design',
   'Web Design',
   'Social Media',
+  'AI Generation',
+  'Automation Calls',
   'Lead Generation',
-  'Copywriting',
+  'Communication Marketing',
+  'Ad Analysis',
+  'Research',
+  'A/B Testing',
+  'Videos and Ads',
 ];
 
 const CARDS = [
