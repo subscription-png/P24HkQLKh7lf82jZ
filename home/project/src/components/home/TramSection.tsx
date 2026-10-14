@@ -29,9 +29,12 @@ export default function TramSection() {
 
       <motion.p
         style={reduced ? undefined : { opacity: textOpacity }}
-        className="absolute inset-0 z-0 flex items-center justify-center text-center text-4xl font-bold tracking-tight md:text-6xl"
+        className="absolute inset-0 z-0 flex flex-col items-center justify-center text-center text-4xl font-bold tracking-tight md:text-6xl"
       >
-        THE CITY OPENS
+        D2 Media is ready for Melbourne…<br />
+        <span className="block text-[2.5rem] md:text-[5rem] mt-2">
+          Are you ready to stand-out?
+        </span>
       </motion.p>
 
       {/* Door halves */}
