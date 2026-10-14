@@ -30,10 +30,7 @@ export function ScrollLockedVideoHero({
   const videoScale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.2, 1.4]);
   const videoOpacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [1, 0.8, 0.6, 0.4]);
   const overlayOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.3, 0.5, 0.7]);
-  const titleY = useTransform(scrollYProgress, [0, 0.5, 1], [0, -50, -100]);
-  const titleOpacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [1, 0.8, 0.6, 0]);
-  const subtitleY = useTransform(scrollYProgress, [0, 0.5, 1], [0, -30, -60]);
-  const subtitleOpacity = useTransform(scrollYProgress, [0, 0.4, 0.8, 1], [1, 0.9, 0.7, 0]);
+
 
   // Scrub video playback based on scroll
   useEffect(() => {
@@ -111,20 +108,14 @@ export function ScrollLockedVideoHero({
         {/* Content Container */}
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-5 text-center">
           {/* Main Title */}
-          <motion.h2
-            style={reduced ? undefined : { y: titleY, opacity: titleOpacity }}
-            className="text-4xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl"
-          >
+          <h2 className="text-4xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl">
             {title}
-          </motion.h2>
+          </h2>
 
           {/* Subtitle */}
-          <motion.p
-            style={reduced ? undefined : { y: subtitleY, opacity: subtitleOpacity }}
-            className="mt-4 text-[2.5rem] font-bold leading-tight text-yellow md:text-[5rem] lg:text-[6rem]"
-          >
+          <p className="mt-4 text-[2.5rem] font-bold leading-tight text-yellow md:text-[5rem] lg:text-[6rem]">
             {subtitle}
-          </motion.p>
+          </p>
 
           {/* Decorative Elements */}
           <motion.div
