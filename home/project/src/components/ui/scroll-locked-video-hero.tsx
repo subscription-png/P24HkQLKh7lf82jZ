@@ -12,7 +12,7 @@ interface ScrollLockedVideoHeroProps {
 export function ScrollLockedVideoHero({
   title,
   subtitle,
-  videoSrc = 'https://assets.mixkit.co/videos/preview/mixkit-melbourne-tram-going-through-the-city-42240-large.mp4',
+  videoSrc,
   posterSrc = 'https://images.unsplash.com/photo-1514395462725-fb4566210144?w=1920&h=1080&fit=crop',
   className = '',
 }: ScrollLockedVideoHeroProps) {
@@ -20,6 +20,7 @@ export function ScrollLockedVideoHero({
   const videoRef = useRef<HTMLVideoElement>(null);
   const reduced = useReducedMotion();
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [videoError, setVideoError] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -30,11 +31,14 @@ export function ScrollLockedVideoHero({
   const videoScale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.2, 1.4]);
   const videoOpacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [1, 0.8, 0.6, 0.4]);
   const overlayOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.3, 0.5, 0.7]);
-
+  const titleY = useTransform(scrollYProgress, [0, 0.5, 1], [0, -50, -100]);
+  const titleOpacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [1, 0.8, 0.6, 0]);
+  const subtitleY = useTransform(scrollYProgress, [0, 0.5, 1], [0, -30, -60]);
+  const subtitleOpacity = useTransform(scrollYProgress, [0, 0.4, 0.8, 1], [1, 0.9, 0.7, 0]);
 
   // Scrub video playback based on scroll
   useEffect(() => {
-    if (!videoRef.current || !isVideoLoaded || reduced) return;
+    if (!videoRef.current || !isVideoLoaded || reduced || videoError || !videoSrc) return;
 
     const video = videoRef.current;
     const duration = video.duration;
@@ -52,7 +56,7 @@ export function ScrollLockedVideoHero({
     });
 
     return () => unsubscribe();
-  }, [scrollYProgress, isVideoLoaded, reduced]);
+  }, [scrollYProgress, isVideoLoaded, reduced, videoError, videoSrc]);
 
   // Handle video loaded
   const handleVideoLoaded = () => {
@@ -61,6 +65,12 @@ export function ScrollLockedVideoHero({
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
     }
+  };
+
+  // Handle video error
+  const handleVideoError = () => {
+    console.warn('Video failed to load, using poster image');
+    setVideoError(true);
   };
 
   return (
@@ -75,22 +85,22 @@ export function ScrollLockedVideoHero({
           style={reduced ? undefined : { scale: videoScale, opacity: videoOpacity }}
           className="absolute inset-0"
         >
-          <video
-            ref={videoRef}
-            className="h-full w-full object-cover"
-            muted
-            playsInline
-            preload="auto"
-            poster={posterSrc}
-            onLoadedMetadata={handleVideoLoaded}
-            aria-label="Background video"
-          >
-            <source src={videoSrc} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          
-          {/* Fallback image if video doesn't load */}
-          {!isVideoLoaded && (
+          {videoSrc && !videoError ? (
+            <video
+              ref={videoRef}
+              className="h-full w-full object-cover"
+              muted
+              playsInline
+              preload="auto"
+              poster={posterSrc}
+              onLoadedMetadata={handleVideoLoaded}
+              onError={handleVideoError}
+              aria-label="Background video"
+            >
+              <source src={videoSrc} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          ) : (
             <img
               src={posterSrc}
               alt="Melbourne cityscape"
@@ -108,14 +118,20 @@ export function ScrollLockedVideoHero({
         {/* Content Container */}
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-5 text-center">
           {/* Main Title */}
-          <h2 className="text-4xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl">
+          <motion.h2
+            style={reduced ? undefined : { y: titleY, opacity: titleOpacity }}
+            className="text-4xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl"
+          >
             {title}
-          </h2>
+          </motion.h2>
 
           {/* Subtitle */}
-          <p className="mt-4 text-[2.5rem] font-bold leading-tight text-yellow md:text-[5rem] lg:text-[6rem]">
+          <motion.p
+            style={reduced ? undefined : { y: subtitleY, opacity: subtitleOpacity }}
+            className="mt-4 text-[2.5rem] font-bold leading-tight text-yellow md:text-[5rem] lg:text-[6rem]"
+          >
             {subtitle}
-          </p>
+          </motion.p>
 
           {/* Decorative Elements */}
           <motion.div
