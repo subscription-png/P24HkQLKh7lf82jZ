@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
+import { motion } from 'framer-motion';
 import FadeIn from '@/components/FadeIn';
+import { Component as ImageAutoSlider } from '@/components/ui/image-auto-slider';
 
 export const Route = createFileRoute('/d2-dna')({
   head: () => ({
@@ -53,6 +55,30 @@ function D2DnaPage() {
             The process behind every brand we make impossible to ignore. Three steps. No shortcuts.
           </p>
         </FadeIn>
+      </section>
+
+      {/* We don't do boring section */}
+      <section className="px-5 pb-16 md:px-10" aria-label="Our approach">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center"
+        >
+          <h2 className="text-4xl font-bold leading-tight md:text-6xl lg:text-7xl">
+            <span className="text-white">We don't do </span>
+            <span className="text-purple">boring.</span>
+          </h2>
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-white/80 md:text-xl">
+            Every brand has a story. We make sure yours is impossible to ignore.
+          </p>
+        </motion.div>
+      </section>
+
+      {/* Image card marquee */}
+      <section className="pb-24" aria-label="Brand showcase">
+        <ImageAutoSlider />
       </section>
 
       {/* Process steps */}
