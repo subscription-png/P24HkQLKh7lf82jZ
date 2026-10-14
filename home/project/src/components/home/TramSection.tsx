@@ -22,7 +22,7 @@ export default function TramSection() {
           className="absolute inset-0"
         >
           <img
-            src="/images/melbourne-tram.jpg"
+            src="https://images.unsplash.com/photo-1514395462725-fb4566210144?w=1920&h=1080&fit=crop"
             alt="Melbourne tram at night"
             className="h-full w-full object-cover"
             loading="lazy"
