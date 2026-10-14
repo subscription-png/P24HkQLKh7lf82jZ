@@ -2,7 +2,6 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import FadeIn from '@/components/FadeIn';
-import { Component as ImageAutoSlider } from '@/components/ui/image-auto-slider';
 
 export const Route = createFileRoute('/build-and-scale')({
   head: () => ({
@@ -122,6 +121,6 @@ function BuildAndScalePage() {
           </AnimatePresence>
         </FadeIn>
       </section>
-
+    </main>
   );
 }
