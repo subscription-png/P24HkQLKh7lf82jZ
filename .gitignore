@@ -1,0 +1,16 @@
+# dependencies
+home/project/node_modules
+
+# build output
+home/project/dist
+home/project/.output
+home/project/.vercel
+home/project/.nitro
+home/project/.tanstack
+home/project/.vite
+home/project/*.tsbuildinfo
+
+# logs
+home/project/npm-debug.log*
+home/project/yarn-debug.log*
+home/project/yarn-error.log*
