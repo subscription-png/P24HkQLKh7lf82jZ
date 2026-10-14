@@ -2,6 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import FadeIn from '@/components/FadeIn';
+import { Component as ImageAutoSlider } from '@/components/ui/image-auto-slider';
 
 export const Route = createFileRoute('/build-and-scale')({
   head: () => ({
@@ -56,6 +57,7 @@ function BuildAndScalePage() {
 
   return (
     <main className="pt-28 md:pt-36">
+      {/* Purple service ticker */}
       <section className="px-5 pb-24 md:px-10" aria-label="Build and Scale services">
         <FadeIn className="mx-auto max-w-7xl text-center">
           <h1 className="text-5xl font-bold tracking-tight text-purple md:text-7xl">BUILD &amp; SCALE</h1>
@@ -119,6 +121,25 @@ function BuildAndScalePage() {
             </motion.div>
           </AnimatePresence>
         </FadeIn>
+      </section>
+
+      {/* Three-second hook */}
+      <section className="bg-indigo py-20 md:py-32" aria-label="Three second rule">
+        <div className="mx-auto max-w-4xl px-5 text-center">
+          <h2 className="text-5xl font-bold leading-tight md:text-7xl lg:text-8xl">
+            Do they get it in
+            <br />
+            <span className="text-coral">3 seconds?</span>
+          </h2>
+          <p className="mt-6 text-lg md:text-xl">
+            If not, <span className="font-bold italic text-purple">your copy&apos;s the problem</span> — not your product.
+          </p>
+        </div>
+      </section>
+
+      {/* Image Cards Marquee A */}
+      <section className="bg-indigo pb-16" aria-label="Brand showcase">
+        <ImageAutoSlider />
       </section>
     </main>
   );
