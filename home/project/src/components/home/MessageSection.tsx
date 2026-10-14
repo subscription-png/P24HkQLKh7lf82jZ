@@ -29,10 +29,10 @@ export default function MessageSection() {
             <br />
             <span className="text-coral">3 seconds?</span>
           </h2>
-          <p className="mt-6 text-lg md:text-xl">
+          <h3 className="mt-6 text-2xl md:text-3xl">
             If not, <span className="font-bold italic text-purple">your copy&apos;s the problem</span> — not your
             product.
-          </p>
+          </h3>
         </div>
       </div>
 
