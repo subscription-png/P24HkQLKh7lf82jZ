@@ -28,15 +28,15 @@ export const Component = () => {
           mask: linear-gradient(
             90deg,
             transparent 0%,
-            black 10%,
-            black 90%,
+            #0e0b20 10%,
+            #0e0b20 90%,
             transparent 100%
           );
           -webkit-mask: linear-gradient(
             90deg,
             transparent 0%,
-            black 10%,
-            black 90%,
+            #0e0b20 10%,
+            #0e0b20 90%,
             transparent 100%
           );
         }
@@ -49,10 +49,12 @@ export const Component = () => {
         }
       `}</style>
       
-      <div className="w-full min-h-[22rem] bg-black relative overflow-hidden flex items-center justify-center pb-16">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/90 to-black z-0" />
-        <div className="relative z-10 w-full flex items-center justify-center py-8">
-          <div className="scroll-container w-full max-w-6xl">
+      <div className="w-full min-h-[22rem] bg-[#0e0b20] relative overflow-hidden flex items-center justify-center py-16">
+        <div className="absolute inset-0 z-0" style={{
+          background: 'linear-gradient(to bottom, #0e0b20, rgba(14,11,32,0.9), #0e0b20)'
+        }} />
+        <div className="relative z-10 w-[90%] flex items-center justify-center">
+          <div className="scroll-container w-full">
             <div className="infinite-scroll flex gap-6 w-max">
               {duplicatedImages.map((image, index) => (
                 <div
@@ -70,7 +72,11 @@ export const Component = () => {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black to-transparent z-20" />
+        <div className="absolute bottom-0 left-0 right-0 h-24 z-20"
+          style={{
+            background: 'linear-gradient(to top, #0e0b20, transparent)'
+          }}
+        />
       </div>
     </>
   );
