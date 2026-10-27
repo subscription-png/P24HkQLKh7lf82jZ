@@ -9,7 +9,7 @@ import BuildScaleSection from '@/components/home/BuildScaleSection';
 import TramSection from '@/components/home/TramSection';
 import GrowthDashboardSection from '@/components/home/GrowthDashboardSection';
 import CtaSection from '@/components/home/CtaSection';
-import { ImageAutoSlider } from '@/components/ui/image-auto-slider';
+import { Component as ImageAutoSlider } from '@/components/ui/image-auto-slider';
 
 export const Route = createFileRoute('/')({
   head: () => ({
