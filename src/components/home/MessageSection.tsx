@@ -8,7 +8,7 @@ export default function MessageSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="relative overflow-hidden bg-indigo py-20 md:py-32">
+    <section className="relative overflow-hidden bg-indigo py-12 md:py-20">
       <div className="mx-auto max-w-7xl px-5 md:px-10">
         <motion.div
           ref={ref}
