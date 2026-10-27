@@ -17,11 +17,11 @@ export default function MessageSection() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="text-center"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Do they get it in
             <br />
             <span className="text-coral">3 seconds?</span>
-          </h2>
+          </h1>
           <h3 className="text-2xl md:text-3xl font-bold text-white">
             If not, <span className="font-bold italic text-purple">your copy&apos;s the problem</span> — not your product.
           </h3>
