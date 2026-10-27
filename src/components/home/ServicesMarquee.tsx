@@ -29,8 +29,6 @@ export default function ServicesMarquee() {
         </div>
       </div>
 
-      {/* Three-second hook */}
-      <div className="mx-auto max-w-4xl px-5 py-20 text-center md:py-28"></div>
     </section>
   );
 }
