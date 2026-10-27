@@ -12,7 +12,7 @@ interface ScrollLockedVideoHeroProps {
 export function ScrollLockedVideoHero({
   title,
   subtitle,
-  videoSrc,
+  videoSrc = '/videos/melbourne-tram.mp4',
   posterSrc = 'https://images.unsplash.com/photo-1514395462725-fb4566210144?w=1920&h=1080&fit=crop',
   className = '',
 }: ScrollLockedVideoHeroProps) {
@@ -38,7 +38,7 @@ export function ScrollLockedVideoHero({
 
   // Scrub video playback based on scroll
   useEffect(() => {
-    if (!videoRef.current || !isVideoLoaded || reduced || videoError || !videoSrc) return;
+    if (!videoRef.current || !isVideoLoaded || reduced || videoError) return;
 
     const video = videoRef.current;
     const duration = video.duration;
@@ -56,7 +56,7 @@ export function ScrollLockedVideoHero({
     });
 
     return () => unsubscribe();
-  }, [scrollYProgress, isVideoLoaded, reduced, videoError, videoSrc]);
+  }, [scrollYProgress, isVideoLoaded, reduced, videoError]);
 
   // Handle video loaded
   const handleVideoLoaded = () => {
@@ -85,7 +85,7 @@ export function ScrollLockedVideoHero({
           style={reduced ? undefined : { scale: videoScale, opacity: videoOpacity }}
           className="absolute inset-0"
         >
-          {videoSrc && !videoError ? (
+          {!videoError ? (
             <video
               ref={videoRef}
               className="h-full w-full object-cover"
@@ -101,6 +101,15 @@ export function ScrollLockedVideoHero({
               Your browser does not support the video tag.
             </video>
           ) : (
+            <img
+              src={posterSrc}
+              alt="Melbourne cityscape"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          )}
+          
+          {/* Fallback image if video doesn't load */}
+          {!isVideoLoaded && !videoError && (
             <img
               src={posterSrc}
               alt="Melbourne cityscape"
