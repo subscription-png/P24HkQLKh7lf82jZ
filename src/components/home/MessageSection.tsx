@@ -18,10 +18,12 @@ export default function MessageSection() {
           className="text-center"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Your Product Might Be Great
+            Do they get it in
+            <br />
+            <span className="text-coral">3 seconds?</span>
           </h2>
           <h3 className="text-2xl md:text-3xl font-bold text-white">
-            If not, your copy's the problem — not your product
+            If not, <span className="font-bold italic text-purple">your copy&apos;s the problem</span> — not your product.
           </h3>
         </motion.div>
 
