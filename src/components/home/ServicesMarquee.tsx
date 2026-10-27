@@ -1,5 +1,3 @@
-import ImageAutoSlider from '@/components/ui/image-auto-slider';
-
 const SERVICES = [
   'BRANDING',
   'GRAPHIC DESIGN',
@@ -42,9 +40,6 @@ export default function ServicesMarquee() {
           If not, <span className="font-bold italic text-purple">your copy&apos;s the problem</span> — not your product.
         </h3>
       </div>
-
-      {/* Image slider */}
-      <ImageAutoSlider />
     </section>
   );
 }
