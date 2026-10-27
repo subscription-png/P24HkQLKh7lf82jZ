@@ -50,3 +50,5 @@ export const Component = () => {
     </>
   );
 };
+
+export const ImageAutoSlider = Component;

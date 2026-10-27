@@ -1,5 +1,4 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { Component as ImageAutoSlider } from '@/components/ui/image-auto-slider';
 import HeroSection from '@/components/home/HeroSection';
 import ServicesMarquee from '@/components/home/ServicesMarquee';
 import MessageSection from '@/components/home/MessageSection';
@@ -30,10 +29,6 @@ function Home() {
       <HeroSection />
       <ServicesMarquee />
       <MessageSection />
-      {/* Image card marquee */}
-      <section className="pb-24" aria-label="Brand showcase">
-        <ImageAutoSlider />
-      </section>
       <Demo />
       <DnaSection />
       <BuildScaleSection />
