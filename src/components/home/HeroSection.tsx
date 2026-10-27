@@ -11,7 +11,7 @@ export default function HeroSection() {
   const reduced = useReducedMotion();
 
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-indigo pt-28 md:pt-24" aria-label="Introduction">
+    <section className="relative flex min-h-screen items-end overflow-hidden bg-indigo pt-28 md:pt-24" aria-label="Introduction">
       {/* Video background */}
       <div className="absolute inset-0 h-full w-full overflow-hidden">
         <video
@@ -59,7 +59,7 @@ export default function HeroSection() {
         />
       </svg>
 
-      <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 px-5 md:grid-cols-2 md:px-10">
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl items-end gap-10 px-5 md:grid-cols-2 md:px-10">
         {/* Copy */}
         <div className="relative">
           <h1 className="leading-[1.12] tracking-tight">
@@ -100,7 +100,7 @@ export default function HeroSection() {
           </h1>
 
           {/* Add more space below h1 and position chevrons at the bottom right */}
-          <div className="relative h-64 w-full flex items-end justify-end pt-10">
+          <div className="relative h-32 w-full flex items-end justify-end md:h-64">
             <div className="relative h-48 w-80">
               <motion.svg
                 className="absolute right-20 top-0 md:right-24"
@@ -146,11 +146,11 @@ export default function HeroSection() {
         </div>
 
         {/* HOMESEC1GIRL image */}
-        <div className="relative mx-auto flex w-full items-end md:col-start-2 md:row-start-1 md:h-full">
+        <div className="relative mx-auto flex w-full items-end justify-center md:col-start-2 md:row-start-1 md:h-full md:items-end">
           <img
             src={HOMESEC1GIRL}
             alt="Expressing confidence and individuality — communicate your brand by being uniquely you."
-            className="mx-auto h-auto w-full max-w-full object-contain object-bottom md:max-h-[110%] md:w-auto"
+            className="h-auto w-full max-w-full object-contain object-bottom md:max-h-[110%] md:w-auto"
             loading="eager"
             decoding="async"
           />
