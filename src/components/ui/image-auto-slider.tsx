@@ -53,7 +53,7 @@ export const Component = () => {
         <div className="absolute inset-0 z-0" style={{
           background: 'linear-gradient(to bottom, #0e0b20, rgba(14,11,32,0.9), #0e0b20)'
         }} />
-        <div className="relative z-10 w-[90%] flex items-center justify-center">
+        <div className="relative z-10 w-full flex items-center justify-center">
           <div className="scroll-container w-full">
             <div className="infinite-scroll flex gap-6 w-max">
               {duplicatedImages.map((image, index) => (
