@@ -17,7 +17,7 @@ export default function MessageSection() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="text-center"
         >
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+          <h1 className="font-bold text-white mb-6" style={{ fontSize: 'clamp(4rem, 10vw, 9rem)', lineHeight: '0.9' }}>
             Do they get it in
             <br />
             <span className="text-coral">3 seconds?</span>
