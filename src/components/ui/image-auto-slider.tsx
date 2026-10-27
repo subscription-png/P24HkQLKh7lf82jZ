@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Component = () => {
+export const ImageAutoSlider = () => {
   const images = [
     "https://cdn.21st.dev/assets/mirror/0b/0b2eee3635f20ec932fa27ae8db24eb760045aee6dd53c6cd05b01799761b6fb.jpg",
     "https://cdn.21st.dev/assets/mirror/a0/a0e1a6affa10f9d1304e1ec7a0a074efa2e5befddbe5f55ec1674ca4606a7272.jpg",
@@ -81,3 +81,5 @@ export const Component = () => {
     </>
   );
 };
+
+export const Component = ImageAutoSlider;
