@@ -8,7 +8,7 @@ export default function MessageSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="relative overflow-hidden bg-indigo py-12 md:py-20">
+    <section className="relative overflow-hidden bg-indigo pt-12 pb-8 md:pt-20 md:pb-10">
       <div className="mx-auto max-w-7xl px-5 md:px-10">
         <motion.div
           ref={ref}
@@ -28,7 +28,7 @@ export default function MessageSection() {
         </motion.div>
 
         {/* Image card marquee */}
-        <section className="pb-24" aria-label="Brand showcase">
+        <section className="pb-8" aria-label="Brand showcase">
           <ImageAutoSlider />
         </section>
       </div>
