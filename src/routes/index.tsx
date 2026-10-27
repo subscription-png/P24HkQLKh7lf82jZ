@@ -30,10 +30,6 @@ function Home() {
       <HeroSection />
       <ServicesMarquee />
       <MessageSection />
-      {/* Image card marquee */}
-      <section className="pb-24" aria-label="Brand showcase">
-        <ImageAutoSlider />
-      </section>
       <Demo />
       <DnaSection />
       <BuildScaleSection />
