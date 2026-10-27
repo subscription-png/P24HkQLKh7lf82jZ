@@ -1,5 +1,4 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { Component as ImageAutoSlider } from '@/components/ui/image-auto-slider';
 import HeroSection from '@/components/home/HeroSection';
 import ServicesMarquee from '@/components/home/ServicesMarquee';
 import MessageSection from '@/components/home/MessageSection';
@@ -9,6 +8,7 @@ import BuildScaleSection from '@/components/home/BuildScaleSection';
 import TramSection from '@/components/home/TramSection';
 import GrowthDashboardSection from '@/components/home/GrowthDashboardSection';
 import CtaSection from '@/components/home/CtaSection';
+import { ImageAutoSlider } from '@/components/ui/image-auto-slider';
 
 export const Route = createFileRoute('/')({
   head: () => ({
@@ -30,6 +30,10 @@ function Home() {
       <HeroSection />
       <ServicesMarquee />
       <MessageSection />
+      {/* Image card marquee */}
+      <section className="pb-24" aria-label="Brand showcase">
+        <ImageAutoSlider />
+      </section>
       <Demo />
       <DnaSection />
       <BuildScaleSection />
