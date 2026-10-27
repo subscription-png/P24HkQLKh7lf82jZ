@@ -1,9 +1,9 @@
-import { ImageAutoSlider } from '@/components/ui/image-auto-slider';
-
 export default function MessageSection() {
   return (
-    <section className="pb-24" aria-label="Brand showcase">
-      <ImageAutoSlider />
+    <section className="relative overflow-hidden bg-indigo py-20 md:py-32">
+      <div className="mx-auto max-w-7xl px-5 md:px-10">
+        {/* Section content removed - relocated to Build & Scale page */}
+      </div>
     </section>
   );
 }
